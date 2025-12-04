@@ -5,5 +5,10 @@ module.exports = {
         const { nome, senha } = req.body;
         const novo = Usuario.criar(nome, senha);
         res.json(novo);
+    },
+
+    async listar(req, res){
+        const dados = await Usuario.listar();
+        res.json(dados);
     }
 };

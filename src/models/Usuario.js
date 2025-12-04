@@ -11,7 +11,10 @@ const Usuario = {
             console.log("DEU ERRO! : ", err);
             return err;
         }
-    }
+    },
+
+    listar: () => db.any("SELECT id, nome FROM usuarios"),
+
 };
 
 module.exports = Usuario;
